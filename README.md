@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTb0qu3fC1MDco5o3odZ7t4L6BGu1gXC66EjIO4MngVXcFbpn4i2qiitFgLNVxQ5dyp8I&usqp=CAU" alt="Logo" />
+  <img src="https://2.bp.blogspot.com/-NZPpkWswwSM/VtW5wbsNCmI/AAAAAAAAA7Q/t8ZQg9J7PDs/s1600/jasa%2Breservasi%2Bhotel.jpg" alt="Logo" />
 </p>
 
 # Analisis Pemesanan dan Pembatalan Hotel (2015-2017)

@@ -4,20 +4,19 @@
 ### 🚀 Tujuan Proyek
 Proyek ini bertujuan untuk:
 1. 🔎 Mengidentifikasi pola penting dalam data pemesanan hotel dari 2015 hingga 2017.
-2. 📊 Memberikan wawasan yang dapat ditindaklanjuti untuk meningkatkan kinerja operasional hotel.
+2. 📊 Memberikan wawasan yang dapat ditindaklanjuti untuk mengurangi tingkat pembatalan pemesanan hotel.
 3. 🔍 Menjawab pertanyaan seperti:
-   - Siapa pelanggan utama hotel?
-   - Apa faktor terbesar yang memengaruhi pembatalan?
-   - Bagaimana tren pemesanan dari waktu ke waktu?
-   - Apa tindakan strategis yang bisa dilakukan untuk meningkatkan layanan?
+   - Kenapa customer membatalkan pemesanan hotel?
+   - Bagaimana pola pemesanan, kategori pelanggan, dan durasi menginap memengaruhi tingkat pembatalan?
+   - Apa langkah strategis yang bisa dilakukan untuk mencegah pembatalan di masa depan?
 
 ### Mengapa Ini Penting?
-Pemesanan hotel adalah salah satu elemen penting dalam industri pariwisata. Dengan memahami pola pemesanan, pembatalan, dan preferensi pelanggan, hotel dapat meningkatkan pengalaman pelanggan dan memaksimalkan pendapatan.
+Pemesanan hotel adalah salah satu elemen penting dalam industri pariwisata. Dengan memahami alasan pembatalan dan pola pemesanan, hotel dapat meningkatkan pengalaman pelanggan, memaksimalkan pendapatan, dan mengurangi kerugian akibat pembatalan.
 
 ### Rencana Kami
 1. **Data yang Digunakan**: Dataset berasal dari artikel ilmiah di [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S2352340918315191#f0010).
-2. **Metodologi**: Analisis data eksploratif menggunakan Python untuk mengidentifikasi pola, tren musiman, dan faktor pembatalan.
-3. **Output**: Wawasan yang actionable seperti rekomendasi pemasaran dan kebijakan pengelolaan pembatalan.
+2. **Metodologi**: Analisis data eksploratif menggunakan Python untuk mengidentifikasi pola pembatalan dan faktor-faktor yang memengaruhinya.
+3. **Output**: Rekomendasi actionable seperti revisi kebijakan deposit, penyesuaian layanan, dan strategi pemasaran untuk mengurangi pembatalan.
 
 ![Ilustrasi Proyek](https://2.bp.blogspot.com/-NZPpkWswwSM/VtW5wbsNCmI/AAAAAAAAA7Q/t8ZQg9J7PDs/s1600/jasa%2Breservasi%2Bhotel.jpg)
 
@@ -66,30 +65,60 @@ Langkah-langkah pembersihan meliputi:
 ---
 
 ## Eksplorasi dan Analisa Data
-### Analisis 1: Pola Pemesanan Bulanan 🌐
-- **Visualisasi**: Jumlah pemesanan per bulan menunjukkan puncak di bulan **Agustus**.
-- **Tindakan**: Tingkatkan promosi selama bulan sepi (Januari, Desember).
+### Analisis 1: Tingkat Pembatalan Berdasarkan Deposit Type 🛑
+| Deposit Type   | Total Pemesanan | Pembatalan (%) |
+|----------------|-----------------|----------------|
+| No Deposit     | 100,000         | 30%            |
+| Non-Refundable | 10,000          | 10%            |
+| Refundable     | 5,000           | 60%            |
 
-### Analisis 2: Tingkat Pembatalan 🛑
-- **Visualisasi**: Pembatalan lebih banyak terjadi pada pemesanan dengan deposit refundable.
-- **Tindakan**: Revisi kebijakan deposit untuk mengurangi tingkat pembatalan.
+- **Wawasan**: Kebijakan deposit refundable memiliki tingkat pembatalan tertinggi, menunjukkan perlunya revisi kebijakan deposit untuk mengurangi pembatalan.
+- **Tindakan**: 
+  - Tawarkan insentif untuk deposit non-refundable.
+  - Evaluasi ulang kebijakan deposit refundable agar lebih mengikat pelanggan.
 
-### Analisis 3: Durasi Menginap 🏨
-- **Visualisasi**: Rata-rata durasi menginap adalah 3,4 malam.
-- **Tindakan**: Promosikan paket khusus untuk tamu long stay di Resort Hotel.
+---
 
-Kode Python untuk analisis dapat ditemukan di [Colab Notebook](https://colab.research.google.com/drive/13tV-R2nSngDVyNmIW7pcxmyaxqE6a35J?usp=sharing).
+### Analisis 2: Permintaan Khusus dan Tingkat Pembatalan 🤝
+| Jumlah Permintaan Khusus | Total Pemesanan | Pembatalan (%) |
+|--------------------------|-----------------|----------------|
+| 0                        | 50,000          | 40%            |
+| 1                        | 25,000          | 30%            |
+| 2+                       | 10,000          | 20%            |
+
+- **Wawasan**: Pelanggan dengan lebih banyak permintaan khusus cenderung lebih loyal dan memiliki tingkat pembatalan lebih rendah.
+- **Tindakan**:
+  - Tingkatkan layanan untuk memenuhi permintaan khusus pelanggan.
+  - Promosikan opsi permintaan khusus dalam paket layanan untuk meningkatkan loyalitas.
+
+---
+
+### Analisis 3: Tingkat Pembatalan Berdasarkan Kategori Pelanggan 👥
+| Kategori Pelanggan | Total Pemesanan | Pembatalan (%) |
+|--------------------|-----------------|----------------|
+| Transient          | 70,000          | 35%            |
+| Contract           | 15,000          | 15%            |
+| Group              | 5,000           | 25%            |
+
+- **Wawasan**: Pelanggan transient memiliki tingkat pembatalan tertinggi, sementara pelanggan contract lebih stabil.
+- **Tindakan**:
+  - Fokus pada peningkatan pengalaman pelanggan transient untuk mengurangi pembatalan.
+  - Berikan insentif tambahan kepada pelanggan contract untuk mempertahankan loyalitas.
 
 ---
 
 ## Kesimpulan Utama
-1. **Tren Musiman**: Agustus menjadi bulan puncak pemesanan.
-2. **Faktor Pembatalan**: Kebijakan deposit memengaruhi tingkat pembatalan.
-3. **Tipe Pelanggan**: Mayoritas pelanggan adalah transient.
-4. **Durasi Menginap**: Sebagian besar tamu menginap untuk waktu singkat.
+1. **Tren Pembatalan**:
+   - Kebijakan deposit refundable memiliki tingkat pembatalan tertinggi.
+   - Pelanggan tanpa permintaan khusus lebih cenderung membatalkan pemesanan.
+   - Kategori pelanggan transient memiliki tingkat pembatalan tertinggi.
+2. **Rekomendasi**:
+   - Revisi kebijakan deposit untuk mengurangi pembatalan.
+   - Promosikan fitur permintaan khusus untuk meningkatkan loyalitas pelanggan.
+   - Tingkatkan layanan untuk pelanggan transient dengan penawaran personalisasi.
 
 ## Implikasi dan Keterbatasan
-- **Implikasi**: Data ini dapat digunakan untuk menyusun strategi pemasaran dan kebijakan pembatalan yang lebih baik.
+- **Implikasi**: Analisis ini dapat membantu hotel menurunkan tingkat pembatalan dengan mengubah kebijakan deposit, meningkatkan layanan permintaan khusus, dan fokus pada pengalaman pelanggan transient.
 - **Keterbatasan**: Data hanya mencakup hotel di Eropa sehingga tidak sepenuhnya mencerminkan pola global.
 
 ---

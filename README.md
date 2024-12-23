@@ -1,73 +1,98 @@
-<p align="center">
-  <img src="https://2.bp.blogspot.com/-NZPpkWswwSM/VtW5wbsNCmI/AAAAAAAAA7Q/t8ZQg9J7PDs/s1600/jasa%2Breservasi%2Bhotel.jpg" alt="Logo" />
-</p>
+# Storyboard Proyek: Analisis Data Hotel 2015–2017
 
-# Analisis Pemesanan dan Pembatalan Hotel (2015-2017)
+## Pendahuluan
+### 🚀 Tujuan Proyek
+Proyek ini bertujuan untuk:
+1. 🔎 Mengidentifikasi pola penting dalam data pemesanan hotel dari 2015 hingga 2017.
+2. 📊 Memberikan wawasan yang dapat ditindaklanjuti untuk meningkatkan kinerja operasional hotel.
+3. 🔍 Menjawab pertanyaan seperti:
+   - Siapa pelanggan utama hotel?
+   - Apa faktor terbesar yang memengaruhi pembatalan?
+   - Bagaimana tren pemesanan dari waktu ke waktu?
+   - Apa tindakan strategis yang bisa dilakukan untuk meningkatkan layanan?
 
-Proyek ini menganalisis pola pemesanan dan pembatalan hotel untuk mengidentifikasi faktor dominan yang memengaruhi pembatalan dan memberikan solusi strategis. Fokus utama adalah pada penghapusan fitur "No Deposit" dan penambahan fitur "Special Request" untuk meningkatkan retensi pelanggan dan efisiensi operasional.
+### Mengapa Ini Penting?
+Pemesanan hotel adalah salah satu elemen penting dalam industri pariwisata. Dengan memahami pola pemesanan, pembatalan, dan preferensi pelanggan, hotel dapat meningkatkan pengalaman pelanggan dan memaksimalkan pendapatan.
 
-## 🔗 Data dan Tools
-- Dataset: [Hotel Booking Demand Dataset](https://www.sciencedirect.com/science/article/pii/S2352340918315191#f0010)
-- Library Python:
-  - `pandas`: Manipulasi data
-  - `matplotlib`, `seaborn`: Visualisasi
-  - `scikit-learn`: Analisis prediktif
+### Rencana Kami
+1. **Data yang Digunakan**: Dataset berasal dari artikel ilmiah di [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S2352340918315191#f0010).
+2. **Metodologi**: Analisis data eksploratif menggunakan Python untuk mengidentifikasi pola, tren musiman, dan faktor pembatalan.
+3. **Output**: Wawasan yang actionable seperti rekomendasi pemasaran dan kebijakan pengelolaan pembatalan.
 
-## 📊 Statistik Deskriptif
-
-### Rangkuman Variabel Penting:
-| Variabel            | Deskripsi                              | Statistik Utama           |
-|---------------------|----------------------------------------|---------------------------|
-| `lead_time`         | Waktu antara pemesanan dan check-in   | Rata-rata: xx hari        |
-| `adr`               | Rata-rata tarif harian                | Median: xx                |
-| `total_of_special_requests` | Permintaan khusus oleh pelanggan | Mayoritas: 0              |
-
-### Temuan Utama:
-1. Mayoritas tamu berasal dari **Portugal**, diikuti oleh **Inggris** dan **Prancis**.
-2. **City Hotel** mendominasi pemesanan, tetapi tingkat pembatalannya lebih tinggi dibandingkan **Resort Hotel**.
-3. Tamu **Contract** memiliki durasi menginap rata-rata tertinggi (**6.18 malam**).
+![Ilustrasi Proyek](https://2.bp.blogspot.com/-NZPpkWswwSM/VtW5wbsNCmI/AAAAAAAAA7Q/t8ZQg9J7PDs/s1600/jasa%2Breservasi%2Bhotel.jpg)
 
 ---
 
-## 📈 Visualisasi Penting
+## Package yang Diperlukan
+Untuk menjalankan analisis ini, pastikan Anda telah menginstal package berikut:
+- `pandas`
+- `numpy`
+- `matplotlib`
+- `seaborn`
+- `plotly`
+- `geopandas`
 
-### 1. Tingkat Pembatalan Berdasarkan Tipe Deposit
-_Tambahkan plot pembatalan deposit di sini._
-
-### 2. Distribusi Pemesanan Berdasarkan Negara
-_Tambahkan peta dunia distribusi tamu di sini._
-
-### 3. Rata-rata Durasi Menginap Berdasarkan Tipe Pelanggan
-_Tambahkan plot durasi menginap di sini._
-
-### 4. Tren Pemesanan Bulanan
-_Tambahkan grafik tren pemesanan di sini._
-
----
-
-## 💡 Solusi yang Diusulkan
-1. **Penghapusan Fitur "No Deposit":**
-   - Meningkatkan komitmen pelanggan terhadap pemesanan.
-   - Mengurangi tingkat pembatalan.
-2. **Penambahan Fitur "Special Request":**
-   - Meningkatkan kepuasan pelanggan.
-   - Menekan tingkat pembatalan oleh tamu dengan kebutuhan khusus.
+Tambahkan dengan perintah:
+```python
+!pip install pandas numpy matplotlib seaborn plotly geopandas
+```
 
 ---
 
-## 🔍 Kesimpulan dan Langkah Selanjutnya
+## Data Preparation
+### Sumber Data
+Dataset diambil dari [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S2352340918315191#f0010) yang mencakup data pemesanan hotel dari 2015 hingga 2017. Data ini mencakup variabel seperti:
+- Tipe pelanggan
+- Durasi menginap
+- Tipe hotel (City/Resort)
+- Status pembatalan
+- Permintaan khusus (special requests)
 
-### Wawasan Utama:
-- Tingkat pembatalan tinggi di **City Hotel** dan tamu tipe **Transient**.
-- Deposit non-refundable efektif menekan pembatalan.
-- Musim liburan (Agustus) menunjukkan puncak pemesanan.
+### Pembersihan Data
+Langkah-langkah pembersihan meliputi:
+1. Menghapus nilai yang hilang di kolom penting seperti `duration_stay`.
+2. Mengonversi tipe data untuk konsistensi (contoh: tanggal ke format datetime).
+3. Membuat variabel baru, seperti `long_stay` (“durasi menginap > 5 malam”).
 
-### Langkah Selanjutnya:
-- Implementasi strategi deposit fleksibel dan fitur permintaan khusus.
-- Analisis tambahan dengan data baru.
+**Hasil Data yang Telah Dibersihkan**:
+| Variabel             | Tipe Data   | Deskripsi                                 |
+|----------------------|-------------|-------------------------------------------|
+| `hotel`              | Kategorikal | Tipe hotel (City atau Resort)             |
+| `is_canceled`        | Biner       | Status pembatalan (0 = Tidak, 1 = Ya)     |
+| `lead_time`          | Numerik     | Waktu dari pemesanan hingga check-in      |
+| `arrival_date_month` | Kategorikal | Bulan kedatangan                          |
+| `stays_in_week_nights` | Numerik    | Durasi menginap selama hari kerja         |
 
 ---
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Data%20Analysis-Python-blue?style=for-the-badge&logo=python&logoColor=white" alt="Python Badge" />
-</p>
+## Eksplorasi dan Analisa Data
+### Analisis 1: Pola Pemesanan Bulanan 🌐
+- **Visualisasi**: Jumlah pemesanan per bulan menunjukkan puncak di bulan **Agustus**.
+- **Tindakan**: Tingkatkan promosi selama bulan sepi (Januari, Desember).
+
+### Analisis 2: Tingkat Pembatalan 🛑
+- **Visualisasi**: Pembatalan lebih banyak terjadi pada pemesanan dengan deposit refundable.
+- **Tindakan**: Revisi kebijakan deposit untuk mengurangi tingkat pembatalan.
+
+### Analisis 3: Durasi Menginap 🏨
+- **Visualisasi**: Rata-rata durasi menginap adalah 3,4 malam.
+- **Tindakan**: Promosikan paket khusus untuk tamu long stay di Resort Hotel.
+
+Kode Python untuk analisis dapat ditemukan di [Colab Notebook](https://colab.research.google.com/drive/13tV-R2nSngDVyNmIW7pcxmyaxqE6a35J?usp=sharing).
+
+---
+
+## Kesimpulan Utama
+1. **Tren Musiman**: Agustus menjadi bulan puncak pemesanan.
+2. **Faktor Pembatalan**: Kebijakan deposit memengaruhi tingkat pembatalan.
+3. **Tipe Pelanggan**: Mayoritas pelanggan adalah transient.
+4. **Durasi Menginap**: Sebagian besar tamu menginap untuk waktu singkat.
+
+## Implikasi dan Keterbatasan
+- **Implikasi**: Data ini dapat digunakan untuk menyusun strategi pemasaran dan kebijakan pembatalan yang lebih baik.
+- **Keterbatasan**: Data hanya mencakup hotel di Eropa sehingga tidak sepenuhnya mencerminkan pola global.
+
+---
+
+## Acknowledgment
+Visualisasi dan analisis ini dibuat berdasarkan data dari [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S2352340918315191#f0010). Semua kode tersedia di [Colab Notebook](https://colab.research.google.com/drive/13tV-R2nSngDVyNmIW7pcxmyaxqE6a35J?usp=sharing).

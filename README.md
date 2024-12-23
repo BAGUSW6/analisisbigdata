@@ -14,7 +14,7 @@ Proyek ini bertujuan untuk:
 Pemesanan hotel adalah salah satu elemen penting dalam industri pariwisata. Dengan memahami alasan pembatalan dan pola pemesanan, hotel dapat meningkatkan pengalaman pelanggan, memaksimalkan pendapatan, dan mengurangi kerugian akibat pembatalan.
 
 ### Rencana Kami
-1. **Data yang Digunakan**: Dataset berasal dari artikel ilmiah di [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S2352340918315191#f0010).
+1. **Data yang Digunakan**: Dataset berasal dari artikel ilmiah di [![ScienceDirect](https://img.shields.io/badge/Dataset-ScienceDirect-blue)](https://www.sciencedirect.com/science/article/pii/S2352340918315191#f0010).
 2. **Metodologi**: Analisis data eksploratif menggunakan Python untuk mengidentifikasi pola pembatalan dan faktor-faktor yang memengaruhinya.
 3. **Output**: Rekomendasi actionable seperti revisi kebijakan deposit, penyesuaian layanan, dan strategi pemasaran untuk mengurangi pembatalan.
 
@@ -124,4 +124,4 @@ Langkah-langkah pembersihan meliputi:
 ---
 
 ## Acknowledgment
-Visualisasi dan analisis ini dibuat berdasarkan data dari [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S2352340918315191#f0010). Semua kode tersedia di [Colab Notebook](https://colab.research.google.com/drive/13tV-R2nSngDVyNmIW7pcxmyaxqE6a35J?usp=sharing).
+Visualisasi dan analisis ini dibuat berdasarkan data dari [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S2352340918315191#f0010). Semua kode tersedia di [![Open Colab](https://img.shields.io/badge/Notebook-Colab-green)](https://colab.research.google.com/drive/13tV-R2nSngDVyNmIW7pcxmyaxqE6a35J?usp=sharing).

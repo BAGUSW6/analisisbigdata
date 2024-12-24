@@ -21,13 +21,8 @@ Hasil analisis diharapkan memberikan wawasan strategis bagi hotel untuk:
 ## **Bab 2: Package yang Diperlukan**  
 ### 📦 **Daftar Package**  
 Berikut adalah daftar package yang diperlukan untuk menjalankan analisis:  
-- `requests`  
-- `pandas`  
-- `numpy`  
-- `matplotlib`  
-- `seaborn`  
-- `plotly`  
-- `scikit-learn`  
+ `requests`   `pandas`   `numpy`   `matplotlib`   `seaborn`   `plotly` 
+ `scikit-learn`  
 
 ### 💡 *Tips:* Jika belum terinstal, gunakan perintah berikut:  
 ```bash
@@ -86,8 +81,6 @@ Visualisasi ini menunjukkan rata-rata durasi menginap (dalam malam) berdasarkan 
 
 ### **🏦 Tipe Hotel dan Pola Pembatalan**  
 Visualisasi ini mengungkap pola pembatalan reservasi pada dua tipe hotel, yaitu City Hotel dan Resort Hotel, dengan kategori status reservasi Not Canceled dan Canceled. Pada City Hotel, jumlah pembatalan cukup tinggi meskipun reservasi yang tidak dibatalkan tetap mendominasi, yang dapat mengindikasikan tantangan dalam mempertahankan komitmen pelanggan. Sebaliknya, Resort Hotel menunjukkan tingkat pembatalan yang lebih rendah secara absolut, meskipun reservasi yang tidak dibatalkan juga lebih tinggi. Temuan ini memberikan indikasi bahwa City Hotel mungkin memerlukan strategi khusus untuk mengurangi pembatalan, seperti peningkatan pengalaman pelanggan atau pengelolaan ekspektasi, sementara Resort Hotel tampak lebih efektif dalam mempertahankan reservasi.
-
----
 
 ### **🌟 Feature Importance**  
 | Rank | Fitur                        | Kepentingan (%) |  

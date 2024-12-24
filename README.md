@@ -15,13 +15,8 @@ Dengan hasil analisis ini, diharapkan dapat memberikan wawasan strategis bagi ma
 
 Untuk menjalankan analisis ini, pastikan Anda telah menginstal package berikut:
 
-- `requests` 
-- `pandas` 
-- `numpy` 
-- `matplotlib` 
-- `seaborn` 
-- `plotly` 
-- `scikit-learn`
+ `requests`  `pandas`  `numpy`  `matplotlib`  `seaborn`  `plotly` 
+ `scikit-learn`
 
 ### 📃 Perintah Instalasi:
 ```bash
@@ -142,5 +137,6 @@ Pembatalan reservasi hotel berdampak signifikan pada pendapatan dan efisiensi op
 
 ## 📜 Acknowledgment
 
-Data dan visualisasi berasal dari [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S2352340918315191#f0010). Semua kode tersedia di [Google Colab](https://colab.research.google.com/drive/13tV-R2nSngDVyNmIW7pcxmyaxqE6a35J?usp=sharing).
+Visualisasi dan analisis ini dibuat berdasarkan data dari [![ScienceDirect](https://img.shields.io/badge/Dataset-ScienceDirect-blue)](https://www.sciencedirect.com/science/article/pii/S2352340918315191#f0010)
+Semua kode tersedia di [![Open Colab](https://img.shields.io/badge/Notebook-Colab-green)](https://colab.research.google.com/drive/13tV-R2nSngDVyNmIW7pcxmyaxqE6a35J?usp=sharing).
 

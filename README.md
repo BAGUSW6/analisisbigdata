@@ -2,6 +2,8 @@
 
 ![Ilustrasi Proyek](https://2.bp.blogspot.com/-NZPpkWswwSM/VtW5wbsNCmI/AAAAAAAAA7Q/t8ZQg9J7PDs/s1600/jasa%2Breservasi%2Bhotel.jpg)
 
+---
+
 ## Bab 1: About
 
 Pembatalan pemesanan hotel adalah masalah signifikan yang berdampak pada pendapatan dan efisiensi operasional. Masalah ini memerlukan perhatian serius untuk membantu hotel memahami faktor-faktor utama yang memengaruhi pembatalan dan mengembangkan strategi pencegahan yang efektif.
@@ -13,6 +15,8 @@ Dengan hasil analisis ini, diharapkan dapat memberikan wawasan strategis bagi ma
 ---
 
 ## Bab 2: Package yang Diperlukan
+
+### 📦 Daftar Package
 
 Untuk menjalankan analisis ini, pastikan Anda telah menginstal package berikut:
 
@@ -32,7 +36,7 @@ pip install pandas numpy matplotlib seaborn plotly scikit-learn
 
 Dataset ini diambil dari [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S2352340918315191#f0010) yang mencakup data pemesanan hotel dari tahun 2015 hingga 2017. Dataset ini berisi informasi tentang 32 variabel terkait detail pemesanan, termasuk data tamu, karakteristik hotel, dan faktor-faktor yang memengaruhi status reservasi.
 
-### Ringkasan Data
+### 🔎 Ringkasan Data
 
 - **Sumber**: Penelitian oleh Antonio, Almeida, dan Nunes (2019).
 - **Periode**: Tahun 2015 hingga 2017.
@@ -48,7 +52,7 @@ Dataset ini diambil dari [ScienceDirect](https://www.sciencedirect.com/science/a
 | `country`              | 488                | 0                  |
 | **Total Data**         | 119.390            | 118.898            |
 
-### Ringkasan Variabel Utama
+### 📌 Ringkasan Variabel Utama
 
 | **Variabel** | **Penanganan Nilai Null**              | **Wawasan Utama**                                  |
 |--------------|----------------------------------------|--------------------------------------------------|
@@ -59,7 +63,7 @@ Dataset ini diambil dari [ScienceDirect](https://www.sciencedirect.com/science/a
 
 ## Bab 4: Exploratory Data Analysis (EDA)
 
-### Analisis Dasar
+### 🔢 Analisis Dasar
 
 | Status Pemesanan       | Jumlah |
 |------------------------|--------|
@@ -68,7 +72,7 @@ Dataset ini diambil dari [ScienceDirect](https://www.sciencedirect.com/science/a
 
 Tabel di atas menunjukkan distribusi status pemesanan, di mana jumlah pemesanan yang tidak dibatalkan jauh lebih tinggi dibandingkan pembatalan.
 
-### 10 Negara Teratas Asal Tamu (2015-2017)
+### 🌍 10 Negara Teratas Asal Tamu (2015-2017)
 
 ![Top 10 Negara](path/to/top10_country_chart.png)
 
@@ -80,13 +84,13 @@ Tabel di atas menunjukkan distribusi status pemesanan, di mana jumlah pemesanan 
 
 Mayoritas tamu berasal dari Portugal (PRT), diikuti oleh Inggris (GBR) dan Prancis (FRA), dengan kategori dewasa mendominasi.
 
-### Pembatalan Berdasarkan Kategori Tamu
+### 🏷️ Pembatalan Berdasarkan Kategori Tamu
 
 ![Kategori Tamu](path/to/guest_category_chart.png)
 
 Kategori tamu Personal mendominasi pasar dengan tingkat pembatalan yang lebih tinggi dibandingkan tamu dari perusahaan (Company).
 
-### Jumlah Pelanggan Berdasarkan Tipe Pelanggan
+### 👥 Jumlah Pelanggan Berdasarkan Tipe Pelanggan
 
 | **Tipe Pelanggan** | **Jumlah** |
 |--------------------|------------|
@@ -101,27 +105,27 @@ Pelanggan tipe Transient dan Transient-Party mendominasi pemesanan fleksibel, se
 
 ## Bab 5: Analisis Lanjutan
 
-### Grafik Pemesanan per Bulan
+### 📅 Grafik Pemesanan per Bulan
 
 ![Jumlah Pemesanan Tiap Bulan](path/to/monthly_booking_chart.png)
 
 Puncak pemesanan terjadi pada bulan Agustus, mencerminkan musim liburan sebagai periode favorit pelanggan.
 
-### Rata-rata Durasi Menginap
+### 🏨 Rata-rata Durasi Menginap
 
 ![Durasi Menginap](path/to/average_stay_chart.png)
 
 Pelanggan tipe Contract memiliki rata-rata durasi menginap tertinggi, terutama di Resort Hotel.
 
-### Proporsi Pelanggan Berdasarkan Tipe Hotel
+### 🏠 Proporsi Pelanggan Berdasarkan Tipe Hotel
 
 ![Proporsi Tipe Hotel](path/to/hotel_type_chart.png)
 
 City Hotel memiliki tingkat pembatalan lebih tinggi dibandingkan Resort Hotel.
 
-### Feature Importance
+### 🌟 Feature Importance
 
-#### Tabel Feature Importance
+#### 📊 Tabel Feature Importance
 
 | Rank | Feature                   | Importance |
 |------|---------------------------|------------|
@@ -133,7 +137,7 @@ City Hotel memiliki tingkat pembatalan lebih tinggi dibandingkan Resort Hotel.
 
 ![Feature Importance](path/to/feature_importance_chart.png)
 
-#### Analisis Feature Utama
+#### 🔍 Analisis Feature Utama
 
 - **Deposit Type**: Non Refund mengurangi pembatalan secara signifikan.
 - **Total Special Requests**: Semakin banyak permintaan khusus, semakin rendah tingkat pembatalan.
